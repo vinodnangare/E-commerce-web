@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prima Mobile Shop</title>
+    <link
+    rel="icon"
+    href=
+"https://logowik.com/content/uploads/images/prima4103.logowik.com.webp"
+    type="image/x-icon"
+/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- fonts links -->
+</head>
+<body>
+
+    <!-- top navbar -->
+    <div class="top-navbar">
+        <p>WELCOME</p>
+        <div class="icons">
+            <a href="login.html"><img src="./images/register.png" alt="" width="18px">Login</a>
+            <a href="register.html"><img src="./images/register.png" alt="" width="18px">Register</a>
+        </div>
+    </div>
+    <!-- top navbar -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" id="logo"><span><img src="" alt=""></span><span id="span1"></span>Mobile<span>Shop</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="./images/menu.png" alt="" width="30px"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Product</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                 
+                  <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
+                
+                  <li><a class="dropdown-item" href="#">Headphone</a></li>
+                
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" id="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- navbar -->
+    
+
+
+
+
+
+
+    
+    <!-- home content -->
+    <section class="home">
+    <div class="content">
+      <h1> <span>Smart Phones</span>
+        <br>
+        Up To <span id="span2">25%</span> Off
+      </h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, saepe.
+        <br>Lorem ipsum dolor sit amet consectetur.
+      </p>
+      <div class="btn"><button>Shop Now</button></div>
+
+    </div>
+    <div class="img">
+    <button>  <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/D103625178_DesktopTallHero_3000x1200_V3._CB558389732_.jpg" alt=""></button>
+    </div> 
+  </section>
+    <!-- home content -->
+
+
+
+
+
+
+
+
+    <!-- product cards -->
+    <div class="container" id="product-cards">
+      <h1 class="text-center">PRODUCTS</h1>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+           <button> <img src="data:image/jpeg;base64,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" alt="" height="304.4"> 
+           </button>
+            <div class="card-body">
+              <h3 class="text-center">Iphone 13 pro</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹129999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+           <button> <img src="https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1585380656805/beea4dadbbedc14edc13b403cacb5bc3.png" alt="" height="304.4"></button>
+            <div class="card-body">
+              <h3 class="text-center">Vivo V19</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹19999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <button><img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1595220196.89229402!400x400!85.png" alt=""height="304.4"></button>
+            <div class="card-body">
+              <h3 class="text-center">Redmi Note 9</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹12999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+           <button> <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRTYcvLgvwCRVrexSPDRTAn2lU97flb-BW3hhP3ATq1OK2dP7TCjQZg8JkuuEjouPbK6jApo-3ee9FYWUaIttI5djrDdFmXzFygxUk0hDBuztSbepbmnTpWc-j3IBe0B5zL-09Ki4Y&usqp=CAc"height="304.4"></button>
+              <div class="card-body">
+              <h3 class="text-center">Samsung Galaxy S24</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹129999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQWMZnYAEmg3vbatKFG-4M8ZPpR9TQvq_Km8aBJUifqOWUEgGLMO9ItzBYAGCTNnQTx209oNAdlvjxCL5QK2W2du1MR1iqxVAAWnSFxzPtArJkCr2mEPvEy&usqp=CAc" alt=""height="304.4">
+            <div class="card-body">
+              <h3 class="text-center">Opp Reno 11</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹29999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+           <button> <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRh8z53wstZHvqnraDyhmBL3-b5JPJOrXznHqPSFdv15aVbagp1iV3hzMnvbj3CYy8L0Rtprwy-XgJltgkf507U94Qy8n5IGmZYm4Xe1CPyvGP740PrIRwFUS-kW3_iBAv3CIBsbb8&usqp=CAc" alt=""height="304.4"></button>
+            <div class="card-body">
+              <h3 class="text-center">One Plus Nord CE4</h3> </h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹15999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <button><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT-X9ycHUdg4Si6XnmJenuM6mZjy1uMB5wIsV9Fikjj_kAm7t8Hwb5epdbZLbGztOrTznG23Xf7EcSpmIy2lmpmuDojmWWG-W4vewBfCnw6rr-zUReA34WoHcMPnw&usqp=CAc" alt=""height="304.4"></button>
+            <div class="card-body">
+              <h3 class="text-center">Realme 11 Pro</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹24999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToz9mqupCL57RE5mlcMtlTAy3_zEkUdgLw4A&s" alt=""height="304.4"></button>
+            <div class="card-body">
+              <h3 class="text-center">Redmi 13</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>₹2999 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- product cards -->
+
+
+
+
+
+
+    
+
+
+    <!-- other cards -->
+     <!--
+    <div class="container" id="other-cards">
+      <div class="row">
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="" alt="">
+            <div class="card-img-overlay">
+              <h3>Samsung</h3>
+              <h5>Latest Collection</h5>
+              <p>Up To 25% Off</p>
+              <button id="shopnow">Shop Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="" alt="">
+            <div class="card-img-overlay">
+              <h3>Best Headphone</h3>
+              <h5>Latest Collection</h5>
+              <p>Up To 25% Off</p>
+              <button id="shopnow">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+
+
+
+
+
+
+    <!-- banner >
+    <section class="banner">
+      <div class="content">
+        <h1> <span>Smart Gadget</span>
+          <br>
+          Up To <span id="span2">50%</span> Off
+        </h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, saepe.
+          <br>Lorem ipsum dolor sit amet consectetur.
+        </p>
+        <div class="btn"><button>Shop Now</button></div>
+  
+      </div>
+      <div class="img">
+        <img src="./images/image1.png" alt="">
+      </div>
+    </section>
+    <!-- banner ->
+
+
+
+
+
+
+
+
+    <!-- product cards ->
+    <div class="container" id="product-cards">
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr1.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Washion Machine</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$100.50 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr2.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">AC</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$500 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr3.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Microwave Oven</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$200.30 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr4.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Fridge</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$300 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- other cards ->
+    <div class="container" id="other">
+      <div class="row">
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/c3.png" alt="">
+            <div class="card-img-overlay">
+              <h3>Home Gadget</h3>
+              <p>Latest collection Up To 25% Off</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/c4.png" alt="">
+            <div class="card-img-overlay">
+              <h3>Gaming Gadget</h3>
+              <p>Latest collection Up To 50% Off</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/c5.png" alt="">
+            <div class="card-img-overlay">
+              <h3>Electronic Gadget</h3>
+              <p>Latest collection Up To 50% Off</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- other cards ->
+
+
+
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr5.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Fan</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$50.60 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr6.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Fridge</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$1500 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr7.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Gaming PC</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>500.60 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr8.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Moniter</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$250 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr9.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Smart Watch</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$30.20 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr10.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Power Bank</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$100.50 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr11.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Gaming Mouse</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$30 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <div class="card">
+            <img src="./images/pr12.png" alt="">
+            <div class="card-body">
+              <h3 class="text-center">Joysticks</h3>
+              <p class="text-center">Lorem ipsum dolor sit amet.</p>
+              <div class="star text-center">
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+                <i class="fa-solid fa-star checked"></i>
+              </div>
+              <h2>$150 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- product cards -->
+
+  -->
+
+
+
+
+
+
+
+    <!-- offer ->
+    <div class="container" id="offer">
+      <div class="row">
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>Free Shipping</h3>
+          <p>On order over Rs 1000</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-rotate-left"></i>
+          <h3>Free Returns</h3>
+          <p>Within 2 days</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-truck"></i>
+          <h3>Fast Delivery</h3>
+          <p></p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h3>Big choice</h3>
+          <p>Of products</p>
+        </div>
+      </div>
+    </div>
+    <!-- offer -->
+
+
+
+
+
+    
+    <!-- newslater -->
+    <div class="container" id="newslater">
+      <h3 class="text-center">Subscribe To The Mobile Shop For Latest upload.</h3>
+      <div class="input text-center">
+        <input type="text" placeholder="Enter Your Email..">
+        <button id="subscribe">SUBSCRIBE</button>
+      </div>
+    </div>
+    <!-- newslater -->
+
+
+
+
+
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Mobile Shop</h3>
+              <p>
+            In Front Of Sanjivani College,Prima Mobile Stores ,Kopargoan<br>
+              </p>
+              <strong>Phone:</strong> +000000000000000 <br>
+              <strong>Email:</strong> prima@.com <br>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Usefull Links</h4>
+             <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policey</a></li>
+             </ul>
+            </div>
+
+
+
+           
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+
+             <ul>
+             
+              <li><a href="#">Mobile Phone</a></li>
+             
+             </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, quibusdam.</p>
+
+              <div class="socail-links mt-3">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container py-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Mobile Shop</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="#">Code Crushers</a>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+
+
+
+
+
+
+    <a href="#" class="arrow"><i><img src="./images/arrow.png" alt=""></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
